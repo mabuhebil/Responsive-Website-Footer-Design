@@ -19,6 +19,16 @@ footer{
     bottom: 0;
     left: 0;
 }
+footer::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top:100px;
+    background-color: #fff;
+
+
+}
 .content{
     max-width: 1250px;
     margin: auto;
@@ -33,6 +43,7 @@ footer{
 .content .top .logo-details{
     color:#fff ;
     font-size: 22px;
+    padding: 20px 0;
 }
 
 .content .top .media-icons a i{
@@ -83,4 +94,70 @@ footer{
 .content .top .media-icons a .fa-youtube:hover{
     color: #FF0000;
     background: #FFF;
+}
+.content .link-boxes{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.content .link-boxes .box{
+    width: calc(100%/5 -10px);
+    margin-top: 5px;
+}
+.content .link-boxes .box li{
+    list-style: none;
+}
+.content .link-boxes .box .link_name{
+    color: #fff;
+    position: relative;
+}
+.content .link-boxes .box .link_name::before{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 35px;
+    background-color: #fff;
+    left: 0;
+    bottom: -1px;
+}
+.content .link-boxes .box li{
+    margin: 7px 0;
+    padding-top: 3px;
+}
+.content .link-boxes .box li a{
+    text-decoration: none;
+    color: #fff;
+    opacity: 0.8;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+.content .link-boxes .box li a:hover{
+    text-decoration: underline;
+    opacity: 1;
+}
+.content .link-boxes .input input{
+    width: calc(100% + 20px);
+    height: 35px;
+    background-color: #140B5C;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    color: #fff ;
+    padding: 0 10px;
+}
+.content .link-boxes .input input::placeholder{
+    padding: 10px;
+    font-weight: bold;
+    
+}
+.content .link-boxes .input input[type="button"]{
+    color: #140B5C;
+    background-color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.content .link-boxes .input input[type="button"]:hover{
+    opacity: 1;
 }
